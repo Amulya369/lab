@@ -1,0 +1,17 @@
+Some websites offer data sets that are downloadable in CSV format, or accessible via an Application Programming Interface (API). But many websites with useful data don’t offer these convenient options.
+
+Consider, for example, the National Weather Service’s website. It contains up-to-date weather forecasts for every location in the US, but that weather data isn’t accessible as a CSV or via API. 
+
+If we wanted to analyze this data, or download it for use in some other app, we wouldn’t want to painstakingly copy-paste everything. Web scraping is a technique that lets us use programming to do the heavy lifting. We’ll write some code that looks at the NWS site, grabs just the data we want to work with, and outputs 
+But unlike a web browser, our web scraping code won't interpret the page's source code and display the page visually. Instead, we'll write some custom code that filters through the page's source code looking for specific elements we’ve specified, and extracting whatever content we’ve instructed it to extract.
+
+For example, if we wanted to get all of the data from inside a table that was displayed on a web page, our code would be written to go through these steps in sequence:
+
+1
+Request the content (source code) of a specific URL from the server
+2
+Download the content that is returned
+3
+Identify the elements of the page that are part of the table we want
+4
+Extract and (if necessary) reformat those elements into a dataset we can analyze or use in whatever way we require.
